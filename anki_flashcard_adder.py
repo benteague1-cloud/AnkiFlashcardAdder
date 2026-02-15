@@ -1,17 +1,13 @@
 #word to anki deck
 # anki_flashcard_adder.py
 #
-# A Python script to add flashcards to Anki using the AnkiConnect add-on.
-# This version uses the Gemini API to automatically generate definitions and examples,
-# with improved text formatting.
-#
 # Author: Gemini, Ben
 # Date: July 15, 2025
 
 import json
 import urllib.request
 import os
-
+# -- gemini 2.5 on free allows a lot fo usage at the time I made this, it's unclear if that's still the case now but other services can easily be written in and out
 # --- Function to get Gemini API Key ---
 def get_gemini_api_key():
     """
@@ -36,6 +32,7 @@ def generate_flashcard_content(api_key, concept):
     print(f"\nGenerating definition and example for '{concept}' using Gemini...")
     try:
         # Construct the prompt for the Gemini API, asking for HTML formatting
+        # have been meaning to update this to work better with translations, but works well for english words at least
         prompt = (
             f"You are an assistant that creates educational flashcards. "
             f"For the term '{concept}', provide a clear, concise definition and a simple, "
@@ -131,7 +128,7 @@ def create_flashcard():
         for name in deck_names:
             print(f"- {name}")
 
-        
+        #essentially "favourite deck" with simple y/n
         if input("\nAI_Adder?") == "y":
             deck_name = "AI_Adder"
         elif input("\nAI_Adder?") == "n":
@@ -218,3 +215,4 @@ if __name__ == '__main__':
     # --------------------------
 
     create_flashcard()
+
