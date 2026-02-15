@@ -1,10 +1,12 @@
 # Generates definitions of words based on ai responses. generally good imo bc referring to literature 
 
 
-must have anki connect plugin, and have anki open before running, I found the ai_add/bat to be very easy to use so as to not get too distracted from reading, but I guess your're using mac
+### must have anki connect plugin, and have anki open before running, I found the ai_add/bat to be very easy to use so as to not get too distracted from reading, but I guess your're using mac
 
 
 # let me know what kinda prompts you ending up setting it with for language learning! at the minute it's mainly aimed at older, more sparse vocabulary or words that I tend to consistnely forget since i whacked it together very quickly. translations are a lot less reliable in accuracy and a lot of cards get thier layout mixed up due to the prompt, but you'll see 
+
+#I think gemini 3 fast might be usable on free tier now but haven't tested this
 
 
     # --- Setup Instructions ---
